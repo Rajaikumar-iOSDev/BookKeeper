@@ -91,6 +91,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		257F5A1A29109B040045F346 /* CoreData files */ = {
+			isa = PBXGroup;
+			children = (
+				25E1355428FF3A2E00A94FC0 /* CoreDataStack.swift */,
+				25E1352728FDE03100A94FC0 /* BookKeeper.xcdatamodeld */,
+			);
+			path = "CoreData files";
+			sourceTree = "<group>";
+		};
+		257F5A1B29109B350045F346 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2583B0BA290336470074A7A0 /* BookKeeper.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		257F5A1C29109B4F0045F346 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2583B0BD29046AD30074A7A0 /* BookKeeperService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		257F5A1D29109B660045F346 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				25E1352228FDE03100A94FC0 /* ViewController.swift */,
+				2583B0C02905CD450074A7A0 /* BooksTableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		25E1351228FDE03100A94FC0 = {
 			isa = PBXGroup;
 			children = (
@@ -116,16 +150,14 @@
 			children = (
 				25E1351E28FDE03100A94FC0 /* AppDelegate.swift */,
 				25E1352028FDE03100A94FC0 /* SceneDelegate.swift */,
-				25E1352228FDE03100A94FC0 /* ViewController.swift */,
-				2583B0C02905CD450074A7A0 /* BooksTableViewController.swift */,
-				2583B0BA290336470074A7A0 /* BookKeeper.swift */,
-				2583B0BD29046AD30074A7A0 /* BookKeeperService.swift */,
+				257F5A1D29109B660045F346 /* ViewControllers */,
+				257F5A1B29109B350045F346 /* Models */,
+				257F5A1C29109B4F0045F346 /* Services */,
 				25E1352A28FDE03800A94FC0 /* Assets.xcassets */,
 				25E1355128FF39C600A94FC0 /* Main.storyboard */,
-				25E1355428FF3A2E00A94FC0 /* CoreDataStack.swift */,
+				257F5A1A29109B040045F346 /* CoreData files */,
 				25E1352C28FDE03800A94FC0 /* LaunchScreen.storyboard */,
 				25E1352F28FDE03800A94FC0 /* Info.plist */,
-				25E1352728FDE03100A94FC0 /* BookKeeper.xcdatamodeld */,
 			);
 			path = BookKeeper;
 			sourceTree = "<group>";
