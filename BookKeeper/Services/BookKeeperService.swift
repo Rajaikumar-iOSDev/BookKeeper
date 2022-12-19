@@ -45,14 +45,14 @@ extension BookKeeperService {
         }
     }
     
-    public func syncReports(with books: [BookKeeperModel]) {
+    public func syncBooks(with books: [BookKeeperModel]) {
         let bgContext = coreDataStack.newDerivedContext
         bgContext().mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         let mainContext = coreDataStack.mainContext
-        var reportsArray = [[String:Any]]()
-        toDictionary(books, &reportsArray)
+        var booksArray = [[String:Any]]()
+        toDictionary(books, &booksArray)
         bgContext().performAndWait {
-            let insertRequest = NSBatchInsertRequest(entity: BookKeeper.entity(), objects: reportsArray)
+            let insertRequest = NSBatchInsertRequest(entity: BookKeeper.entity(), objects: booksArray)
             insertRequest.resultType = NSBatchInsertRequestResultType.objectIDs
             let result = try? bgContext().execute(insertRequest) as? NSBatchInsertResult
             
@@ -63,10 +63,10 @@ extension BookKeeperService {
         }
     }
     
-    public func getReports() -> [BookKeeper]? {
-        let reportFetch: NSFetchRequest<BookKeeper> = BookKeeper.fetchRequest()
+    public func getBooks() -> [BookKeeper]? {
+        let bookFetch: NSFetchRequest<BookKeeper> = BookKeeper.fetchRequest()
         do {
-            let results = try managedObjectContext.fetch(reportFetch)
+            let results = try managedObjectContext.fetch(bookFetch)
             return results
         } catch let error as NSError {
             print("Fetch error: \(error) description: \(error.userInfo)")

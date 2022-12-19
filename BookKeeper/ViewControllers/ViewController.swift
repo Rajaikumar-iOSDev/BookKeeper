@@ -34,13 +34,13 @@ class ViewController: UIViewController{
         book.volume = 1
         book.releaseYear = 2018
         booksArray.append(book)
-        bookKeeperService.syncReports(with: booksArray)
+        bookKeeperService.syncBooks(with: booksArray)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        books = bookKeeperService.getReports()
+        books = bookKeeperService.getBooks()
         booksTableView.reloadData()
     }
     
